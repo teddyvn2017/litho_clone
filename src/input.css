@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap');
+@import "tailwindcss";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --mau-trang: #fff;    
+    --mau-hong-dam:#f2dad4;
+    --mau-hong-nhat:rgba(173, 157, 148, 0.1);
+    --mau-hong-secondary:#faded8;
+    --mau-vang-nhat:#f4eeed;
+    --mau-do:rgb(240, 111, 66);
+
+    --header-height:40px;
+}
+
+.bg__mautrang {
+    background-color:var(--mau-trang);
+}
+
+.bg__hongdam {
+    background-color:var(--mau-hong-dam);
+}
+
+.bg__hongnhat {
+    background-color:var(--mau-hong-nhat);
+}
+
+.bg__vangnhat {
+    background-color:var(--mau-vang-nhat);
+}
+
+.bg__maudo {
+    background-color:var(--mau-do);
+}
+
+.header__height {
+    height:var(--header-height);
+}
+
+.linear__gradient1 {
+    background: linear-gradient(rgb(255, 219, 214) 0%, rgb(255, 229, 225) 100%);
+}
+
+.linear__gradient2 {
+    background: linear-gradient(rgb(255, 238, 221) 0%, rgb(255, 244, 231) 100%);
+}
+
+.linear__gradient3 {
+    background: linear-gradient(rgb(255, 231, 217) 0%, rgb(254, 231, 225) 100%);
+}
+
+@keyframes moveSmallCircle {
+    0%, 100% {
+      transform: translate(-50%, -50%) translateY(0) translateX(0);
+    }
+    25% {
+      transform: translate(-50%, -50%) translateY(-20px) translateX(10px);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(0) translateX(-10px);
+    }
+    75% {
+      transform: translate(-50%, -50%) translateY(20px) translateX(10px);
+    }
+  }
+  

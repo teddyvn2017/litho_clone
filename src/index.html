@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<link href="./output.css" rel="stylesheet">
+</head>
+<body class="relative min-h-screen">
+	<div class="absolute inset-0 bg-gradient-to-r from-[#f4eeed] to-[#ffffff] -z-10"></div>
+    <header class="fixed w-full top-0 left-0 z-50 bg-mau_trang py-4 shadow-md md:shadow-none min-h-[68px]">
+        <nav class="mx-auto px-4 flex flex-row justify-between items-center container">
+			<img src="asset/img/logo_orange.webp" alt="logo" class="max-h-[36px]">  <!-- chieu cao 36 + 16*2 = 68px -->
+			
+			<!-- Menu cho Desktop -->
+			<div class="flex flex-row gap-8">
+				<div class="hidden md:flex gap-8">
+					<a href="#">Home</a>
+					<a href="#">About Us</a>
+					<a href="#">Products</a>
+					<a href="#">Contact</a>
+				</div>
+	
+				<div class="flex flex-row gap-4">
+					<div class="flex flex-row gap-4 text-[20px]">
+						<i class="ri-search-line"></i>
+						<i class="ri-shopping-bag-3-line"></i>	
+					</div>
+		
+					<div class="md:hidden relative w-8 h-8 cursor-pointer flex items-center justify-center" id="menu-toggle">
+						<div class="absolute bg-black w-3 h-0.5 top-2 transition-all duration-300" id="bar-top"></div>
+						<div class="absolute bg-black w-6 h-0.5 transition-all duration-300" id="bar-middle"></div>
+						<div class="absolute bg-black w-3 h-0.5 bottom-2 transition-all duration-300" id="bar-bottom"></div>
+					</div>
+				</div>
+			</div>									
+										
+			<!-- Menu cho Mobile -->
+			<div class="menu__mobile absolute top-[68px] right-0 bg-[#fff] w-2/3 transition translate-x-full" id="mobile-menu">
+				<ul class="flex flex-col md:flex-row gap-4 shadow-md py-4 pl-4">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About Us</a>
+					</li>
+					<li>
+						<a href="#">Products</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+    </header>
+	<main>
+		<section class="hero pt-[80px] font-roboto overflow-hidden">
+			<div class="container flex flex-col gap-8 justify-center items-center px-8 pt-16">
+				<div class="text-center min-h-[180px]">
+					<h4 class="text-neutral-500 text-[12px] uppercase font-light">Decoration Design</h4>
+					<h1 class="text-4xl text-neutral-800 font-medium pt-2">Woodend</h1>
+					<h2 class="text-3xl text-neutral-800">lithology</h2>
+				</div>
+	
+				<div class="relative w-full flex justify-center min-h-[480px]">
+					<!-- hình tròn nhỏ -->
+					<div class="circle-small rounded-full absolute z-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 min-w-[340px] min-h-[340px] bg__hongnhat"></div>					
+					<!-- hình tròn lớn -->
+    				<div class="circle-large absolute bottom-[-620px] left-1/2 -translate-x-1/2 w-[940px] h-[940px] linear__gradient1 rounded-full -z-10"></div>					
+					<img 
+						class="w-[240px] z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+						src="asset/img/ghe1.png" alt="ghe">
+					<div class="rounded-full absolute top-12 right-0 bg__maudo 
+						text-white text-base text-center w-[80px] h-[80px] z-[12] flex flex-col justify-center uppercase leading-5">
+						<span>Only</span>
+						<span>$89</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+<script src="./asset/js/main.js"></script>	
+</body>
+</html>
