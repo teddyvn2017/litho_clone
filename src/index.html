@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 <link href="./output.css" rel="stylesheet">
 </head>
 <body class="relative min-h-screen">
@@ -16,16 +17,16 @@
 			<!-- Menu cho Desktop -->
 			<div class="flex flex-row gap-8">
 				<div class="hidden md:flex gap-8">
-					<a href="#">Home</a>
-					<a href="#">About Us</a>
-					<a href="#">Products</a>
-					<a href="#">Contact</a>
+					<a href="#" class="link-menu active">Home</a>
+					<a href="#" class="link-menu">About Us</a>
+					<a href="#" class="link-menu">Products</a>
+					<a href="#" class="link-menu">Contact</a>
 				</div>
 	
 				<div class="flex flex-row gap-4">
 					<div class="flex flex-row gap-4 text-[20px]">
 						<i class="ri-search-line"></i>
-						<i class="ri-shopping-bag-3-line"></i>	
+						<i class="ri-shopping-bag-3-line shopping-bag"></i>
 					</div>
 		
 					<div class="md:hidden relative w-8 h-8 cursor-pointer flex items-center justify-center" id="menu-toggle">
@@ -56,31 +57,68 @@
 		</nav>
     </header>
 	<main>
-		<section class="hero pt-[80px] font-roboto overflow-hidden">
-			<div class="container flex flex-col gap-8 justify-center items-center px-8 pt-16">
-				<div class="text-center min-h-[180px]">
-					<h4 class="text-neutral-500 text-[12px] uppercase font-light">Decoration Design</h4>
-					<h1 class="text-4xl text-neutral-800 font-medium pt-2">Woodend</h1>
-					<h2 class="text-3xl text-neutral-800">lithology</h2>
+		<section class="hero pt-[80px] md:pb-[80px] font-roboto overflow-hidden">
+			<div 
+				class="container mx-auto flex flex-col gap-8 
+						justify-center items-center px-8 pt-16
+						md:flex-row">
+				<div class="text-center min-h-[180px] md:w-auto md:text-left md:ml-auto md:justify-end">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<h4 class="text-neutral-500 text-[12px] 
+										uppercase font-light md:text-base lg:mb-8" id="heading">Decoration Design</h4>
+								<h1 id="title" class="text-4xl text-neutral-800 font-medium pt-2 md:font-bold md:text-5xl lg:text-6xl xl:text-8xl">Woodend</h1>
+								<h2 id="subtitle" class="text-3xl text-neutral-800 md:text-3xl lg:text-5xl mt-2">lithology</h2>					
+								<!-- shadow-[0px_10px_20px_rgba(0,0,0,0.1)] : x y blur color -->
+								<button class="lg:mt-10 text-[12px] px-4 py-3 bg-white text-gray-700 font-normal 
+									shadow-[0px_10px_20px_rgba(0,0,0,0.1)]  
+									hover:shadow-[0px_15px_40px_rgba(0,0,0,0.15)] 
+									w-fit 
+									transition-shadow duration-300 mt-4 md:text-sm cursor-pointer">
+									DISCOVER NOW
+								</button>
+							</div>							
+						</div>
+					</div>
+					
 				</div>
 	
-				<div class="relative w-full flex justify-center min-h-[480px]">
+				<div class="relative w-full flex justify-center items-center min-h-[480px] md:w-1/2">
 					<!-- hình tròn nhỏ -->
-					<div class="circle-small rounded-full absolute z-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 min-w-[340px] min-h-[340px] bg__hongnhat"></div>					
+					<div id="small_circle" class="rounded-full absolute z-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 
+							min-w-[340px] min-h-[340px] md:min-w-[380px] md:min-h-[380px]
+							lg:min-w-[480px] lg:min-h-[480px] xl:min-w-[500px] xl:min-h-[500px]
+							bg__hongnhat"></div>					
 					<!-- hình tròn lớn -->
-    				<div class="circle-large absolute bottom-[-620px] left-1/2 -translate-x-1/2 w-[940px] h-[940px] linear__gradient1 rounded-full -z-10"></div>					
-					<img 
-						class="w-[240px] z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-						src="asset/img/ghe1.png" alt="ghe">
-					<div class="rounded-full absolute top-12 right-0 bg__maudo 
-						text-white text-base text-center w-[80px] h-[80px] z-[12] flex flex-col justify-center uppercase leading-5">
-						<span>Only</span>
-						<span>$89</span>
+    				<div class="circle-large absolute bottom-[-620px] left-1/2 -translate-x-1/2 w-[940px] h-[940px] 
+								linear__gradient1 rounded-full -z-10
+								md:translate-y-[-300px] md:translate-x-[-60px] lg:w-[1400px] lg:h-[1400px]
+								lg:top-[200px] lg:translate-x-[-60px] lg:translate-y-[-500px]"></div>
+					<div class="absolute z-10 flex flex-col w-[240px] md:w-[320px] xl:w-[360px] justify-center">
+						
+						<img 
+							src="./asset/img/ghe1.png" alt="ghe" id="gheImage">
+
+							<!-- hình tròn giá -->
+							<div class="rounded-full absolute top-12 right-0 bg__maudo 
+								text-white text-base text-center w-[80px] h-[80px] lg:w-[90px] lg:h-[90px]
+								z-[12]	md:right-0 md:top-10 lg:top-[-2rem] lg:right-[-1rem]
+								lg:text-xl	flex flex-col justify-center uppercase leading-5 price">
+								<span class="md:text-base">Only</span>
+								<span class="md:text-3xl">$89</span>
+							</div>
 					</div>
+					<button id="next" class="absolute top-1/2 right-[-40px] bg-gray-800 
+										text-white px-4 py-2 rounded-full cursor-pointer">Next</button>									
 				</div>
 			</div>
 		</section>
 	</main>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+<script src="https://unpkg.com/split-type"></script>
+<script src="./asset/js/slider.js"></script>	
 <script src="./asset/js/main.js"></script>	
+
 </body>
 </html>

@@ -13,7 +13,6 @@ body {
     --mau-hong-secondary:#faded8;
     --mau-vang-nhat:#f4eeed;
     --mau-do:rgb(240, 111, 66);
-
     --header-height:40px;
 }
 
@@ -53,18 +52,59 @@ body {
     background: linear-gradient(rgb(255, 231, 217) 0%, rgb(254, 231, 225) 100%);
 }
 
-@keyframes moveSmallCircle {
-    0%, 100% {
-      transform: translate(-50%, -50%) translateY(0) translateX(0);
-    }
-    25% {
-      transform: translate(-50%, -50%) translateY(-20px) translateX(10px);
-    }
-    50% {
-      transform: translate(-50%, -50%) translateY(0) translateX(-10px);
-    }
-    75% {
-      transform: translate(-50%, -50%) translateY(20px) translateX(10px);
-    }
-  }
-  
+
+.link-menu.active::after{
+    width:100%;
+}
+
+.link-menu {
+    position: relative;
+}
+
+.link-menu::after {
+    content:"";
+    display:block;
+    position:absolute;
+    width:0;
+    height:2px;
+    background-color:var(--mau-do);
+    left:0;
+    bottom:0;
+    transition: width 0.3s ease-in-out;    
+}
+
+.link-menu:hover::after {
+    width:100%;
+}
+
+.shopping-bag {
+    position:relative;
+}
+
+.shopping-bag::after {
+    display:flex;
+    justify-content:center;
+    items-align:center;
+    content:'0';
+    right:-8px;
+    top:0;
+    position:absolute;
+    background-color:var(--mau-do);
+    border-radius:100%;
+    width:16px;
+    height:16px;
+    font-size:10px;
+    color:#fff;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* Khi fadeIn, opacity sẽ chuyển thành 1 */
+.fadeIn {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
