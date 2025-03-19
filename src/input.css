@@ -108,3 +108,49 @@ body {
     transition: opacity 1s ease-in;
 }
 
+/* Định dạng chung */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Màu mũi tên */
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.4s ease;
+    opacity:0.4; 
+}
+
+/* Đổi màu khi hover */
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity:1;
+}
+
+/* Nút prev (mũi tên trái) */
+.prev-btn {
+
+    left: 0px; /* Điều chỉnh vị trí */
+}
+
+/* Nút next (mũi tên phải) */
+.next-btn {
+    right: 0px;
+}
+
+#pagination i {
+    color: #ccc; /* Mặc định màu xám */
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#pagination i.active {
+    color: #222; /* Mặc định màu xám */    
+}

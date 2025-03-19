@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <!-- <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 <link href="./output.css" rel="stylesheet">
@@ -61,7 +61,7 @@
 			<div 
 				class="container mx-auto flex flex-col gap-8 
 						justify-center items-center px-8 pt-16
-						md:flex-row">
+						md:flex-row relative">
 				<div class="text-center min-h-[180px] md:w-auto md:text-left md:ml-auto md:justify-end">
 					<div class="swiper">
 						<div class="swiper-wrapper">
@@ -95,27 +95,40 @@
 								linear__gradient1 rounded-full -z-10
 								md:translate-y-[-300px] md:translate-x-[-60px] lg:w-[1400px] lg:h-[1400px]
 								lg:top-[200px] lg:translate-x-[-60px] lg:translate-y-[-500px]"></div>
-					<div class="absolute z-10 flex flex-col w-[240px] md:w-[320px] xl:w-[360px] justify-center">
+					<div class="absolute z-[13] flex flex-col w-[240px] md:w-[320px] xl:w-[360px] justify-center">
 						
 						<img 
 							src="./asset/img/ghe1.png" alt="ghe" id="gheImage">
 
 							<!-- hình tròn giá -->
-							<div class="rounded-full absolute top-12 right-0 bg__maudo 
+							<div id="price_circle" class="rounded-full absolute top-12 right-0 bg__maudo 
 								text-white text-base text-center w-[80px] h-[80px] lg:w-[90px] lg:h-[90px]
 								z-[12]	md:right-0 md:top-10 lg:top-[-2rem] lg:right-[-1rem]
-								lg:text-xl	flex flex-col justify-center uppercase leading-5 price">
+								lg:text-xl flex flex-col justify-center uppercase leading-5">
 								<span class="md:text-base">Only</span>
 								<span class="md:text-3xl">$89</span>
 							</div>
 					</div>
-					<button id="next" class="absolute top-1/2 right-[-40px] bg-gray-800 
-										text-white px-4 py-2 rounded-full cursor-pointer">Next</button>									
+					<!-- <button id="next" class="absolute top-1/2 right-[-40px] bg-gray-800 
+										text-white px-4 py-2 rounded-full cursor-pointer">Next</button>									 -->
+					
+				</div>
+				
+				<div id="prev" class="prev-btn ml-4">					
+					<i class="ri-arrow-left-long-line"></i>
+				</div>
+				<div id="next" class="next-btn mr-4">
+					<i class="ri-arrow-right-long-line"></i>
+				</div>
+				<div id="pagination" class="absolute bottom-[-24px] left-1/2 -translate-x-1/2 flex flex-grow gap-4">
+					<i class="ri-circle-fill active"></i>
+					<i class="ri-circle-fill"></i>
+					<i class="ri-circle-fill"></i>
 				</div>
 			</div>
 		</section>
 	</main>
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
 <script src="https://unpkg.com/split-type"></script>
 <script src="./asset/js/slider.js"></script>	
 <script src="./asset/js/main.js"></script>	
