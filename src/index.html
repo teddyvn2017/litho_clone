@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<!-- <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 <link href="./output.css" rel="stylesheet">
 </head>
 <body class="relative min-h-screen">
@@ -62,26 +61,20 @@
 				class="container mx-auto flex flex-col gap-8 
 						justify-center items-center px-8 pt-16
 						md:flex-row relative">
-				<div class="text-center min-h-[180px] md:w-auto md:text-left md:ml-auto md:justify-end">
-					<div class="swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<h4 class="text-neutral-500 text-[12px] 
-										uppercase font-light md:text-base lg:mb-8" id="heading">Decoration Design</h4>
-								<h1 id="title" class="text-4xl text-neutral-800 font-medium pt-2 md:font-bold md:text-5xl lg:text-6xl xl:text-8xl">Woodend</h1>
-								<h2 id="subtitle" class="text-3xl text-neutral-800 md:text-3xl lg:text-5xl mt-2">lithology</h2>					
-								<!-- shadow-[0px_10px_20px_rgba(0,0,0,0.1)] : x y blur color -->
-								<button class="lg:mt-10 text-[12px] px-4 py-3 bg-white text-gray-700 font-normal 
-									shadow-[0px_10px_20px_rgba(0,0,0,0.1)]  
-									hover:shadow-[0px_15px_40px_rgba(0,0,0,0.15)] 
-									w-fit 
-									transition-shadow duration-300 mt-4 md:text-sm cursor-pointer">
-									DISCOVER NOW
-								</button>
-							</div>							
-						</div>
-					</div>
-					
+						<!-- chú ý lg:min-w-[480px] để hiệu ứng không bị giật lag thì cố định chiều rộng -->
+				<div class="text-center min-h-[180px] md:w-auto md:text-left md:ml-auto md:justify-end lg:min-w-[480px]">
+					<h4 class="text-neutral-500 text-[12px] 
+							uppercase font-light md:text-base lg:mb-8" id="heading">Decoration Design</h4>
+					<h1 id="title" class="text-4xl text-neutral-800 font-medium pt-2 md:font-bold md:text-5xl lg:text-6xl xl:text-8xl">Woodend</h1>
+					<h2 id="subtitle" class="text-3xl text-neutral-800 md:text-3xl lg:text-5xl mt-2">lithology</h2>					
+					<!-- shadow-[0px_10px_20px_rgba(0,0,0,0.1)] : x y blur color -->
+					<button id="btnDiscover" class="lg:mt-10 text-[12px] px-4 py-3 bg-white text-gray-700 font-normal 
+						shadow-[0px_10px_20px_rgba(0,0,0,0.1)]  
+						hover:shadow-[0px_15px_40px_rgba(0,0,0,0.15)] 
+						w-fit 
+						transition-shadow duration-300 mt-4 md:text-sm cursor-pointer">
+						DISCOVER NOW
+					</button>					
 				</div>
 	
 				<div class="relative w-full flex justify-center items-center min-h-[480px] md:w-1/2">
@@ -91,7 +84,7 @@
 							lg:min-w-[480px] lg:min-h-[480px] xl:min-w-[500px] xl:min-h-[500px]
 							bg__hongnhat"></div>					
 					<!-- hình tròn lớn -->
-    				<div class="circle-large absolute bottom-[-620px] left-1/2 -translate-x-1/2 w-[940px] h-[940px] 
+    				<div id="large_circle" class="absolute bottom-[-620px] left-1/2 -translate-x-1/2 w-[940px] h-[940px] 
 								linear__gradient1 rounded-full -z-10
 								md:translate-y-[-300px] md:translate-x-[-60px] lg:w-[1400px] lg:h-[1400px]
 								lg:top-[200px] lg:translate-x-[-60px] lg:translate-y-[-500px]"></div>
@@ -130,7 +123,8 @@
 	</main>
 
 <script src="https://unpkg.com/split-type"></script>
-<script src="./asset/js/slider.js"></script>	
+<script src="./asset/js/slider.js"></script>
+<script src="./asset/js/animate_circle.js"></script>
 <script src="./asset/js/main.js"></script>	
 
 </body>

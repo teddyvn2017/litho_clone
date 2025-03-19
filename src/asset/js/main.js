@@ -32,53 +32,53 @@ toggleBtn.addEventListener("click", () => {
 
 
 //di chuyển 2 vòn tròn
-gsap.to(".circle-small", {
-    x: -10, 
-    y: 10, 
-    duration: 2,
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.inOut",
-    stagger: 0.5, // Tạo sự chậm trễ nhỏ giữa các lần di chuyển
-});
+// gsap.to(".circle-small", {
+//     x: -10, 
+//     y: 10, 
+//     duration: 2,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "power1.inOut",
+//     stagger: 0.5, // Tạo sự chậm trễ nhỏ giữa các lần di chuyển
+// });
 
 
-gsap.to(".circle-small", {
-    x: -20, 
-    y: 20, 
-    duration: 2,
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.inOut",
-    stagger: 0.5, // Tạo sự chậm trễ nhỏ giữa các lần di chuyển
-});
+// gsap.to(".circle-small", {
+//     x: -20, 
+//     y: 20, 
+//     duration: 2,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "power1.inOut",
+//     stagger: 0.5, // Tạo sự chậm trễ nhỏ giữa các lần di chuyển
+// });
 
-gsap.to(".circle-large", {
-    x: -20, 
-    y: 20,  
-    duration: 3,
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.inOut",
-    stagger: 0.5, // Tạo sự chậm trễ nhỏ giữa các lần di chuyển
-});
+// gsap.to(".circle-large", {
+//     x: -20, 
+//     y: 20,  
+//     duration: 3,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "power1.inOut",
+//     stagger: 0.5, // Tạo sự chậm trễ nhỏ giữa các lần di chuyển
+// });
 
-gsap.to(".circle-small", {
-    x: 10,  // Di chuyển qua trái 50px
-    y: -20,   // Di chuyển xuống 50px
-    duration: 2,
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.inOut",
-    delay: 1, // Tạo độ trễ giữa các chuyển động
-});
+// gsap.to(".circle-small", {
+//     x: 10,  // Di chuyển qua trái 50px
+//     y: -20,   // Di chuyển xuống 50px
+//     duration: 2,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "power1.inOut",
+//     delay: 1, // Tạo độ trễ giữa các chuyển động
+// });
 
-gsap.to(".circle-large", {
-    x: 20,   // Di chuyển qua phải 50px
-    y: -20,  // Di chuyển lên 50px
-    duration: 2,
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.inOut",
-    delay: 1, // Tạo độ trễ giữa các chuyển động
-});
+// gsap.to(".circle-large", {
+//     x: 20,   // Di chuyển qua phải 50px
+//     y: -20,  // Di chuyển lên 50px
+//     duration: 2,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "power1.inOut",
+//     delay: 1, // Tạo độ trễ giữa các chuyển động
+// });
