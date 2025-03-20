@@ -14,6 +14,20 @@ body {
     --mau-vang-nhat:#f4eeed;
     --mau-do:rgb(240, 111, 66);
     --header-height:40px;
+    --mau-den:#222;
+    --mau-xam:#ccc;
+}
+
+.color__maudo {
+    color:var(--mau-do);
+}
+
+.color__mauden {
+    color:var(--mau-den);
+}
+
+.color__mauxam {
+    color:var(--mau-xam);
 }
 
 .bg__mautrang {

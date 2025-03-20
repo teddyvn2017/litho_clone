@@ -155,38 +155,41 @@ prevBtn.addEventListener('click', () => {
    change_content_hero();
 });
 
-const rect = small_circle.getBoundingClientRect();
-const centerX = rect.left + rect.width / 2;  // Tính toán trung tâm của large_circle
-const centerY = rect.top + rect.height / 2;  // Tính toán trung tâm của large_circle
-const radius = 24; // Bán kính vòng tròn (20px)
-const points = 16; // Số điểm trên vòng tròn (8 điểm)
 
-let angle = 0;
-const coordinates = [];
+//Animate circle
 
-for (let i = 0; i < points; i++) {
-    const x = Math.round(centerX + Math.cos(angle) * radius); // Tính x theo cos
-    const y = Math.round(centerY + Math.sin(angle) * radius); // Tính y theo sin
+// const rect = small_circle.getBoundingClientRect();
+// const centerX = rect.left + rect.width / 2;  // Tính toán trung tâm của large_circle
+// const centerY = rect.top + rect.height / 2;  // Tính toán trung tâm của large_circle
+// const radius = 24; // Bán kính vòng tròn (20px)
+// const points = 16; // Số điểm trên vòng tròn (8 điểm)
 
-    coordinates.push({ x, y });
+// let angle = 0;
+// const coordinates = [];
 
-    angle += (2 * Math.PI) / points; // Tăng góc để chuyển đến điểm tiếp theo (360° / 8 = 45°)
-    console.log("Tọa độ thứ i:", i) ;
-}
+// for (let i = 0; i < points; i++) {
+//     const x = Math.round(centerX + Math.cos(angle) * radius); // Tính x theo cos
+//     const y = Math.round(centerY + Math.sin(angle) * radius); // Tính y theo sin
 
-console.log("Tọa độ các điểm trên vòng tròn:", coordinates);
+//     coordinates.push({ x, y });
 
-// Tạo timeline để di chuyển các phần tử theo vòng tròn
-const timeline = gsap.timeline({ repeat: -1, ease: "none" });
+//     angle += (2 * Math.PI) / points; // Tăng góc để chuyển đến điểm tiếp theo (360° / 8 = 45°)
+//     console.log("Tọa độ thứ i:", i) ;
+// }
 
-coordinates.forEach(({ x, y }, index) => {
-    timeline.to([small_circle, large_circle], {
-        x: x - centerX, // Điều chỉnh vị trí x của small_circle và large_circle
-        y: y - centerY, // Điều chỉnh vị trí y của small_circle và large_circle
-        duration:1, // Thời gian chuyển động        
-        ease: "none"
-    });
-});
+// console.log("Tọa độ các điểm trên vòng tròn:", coordinates);
+
+// // Tạo timeline để di chuyển các phần tử theo vòng tròn
+// const timeline = gsap.timeline({ repeat: -1, ease: "none" });
+
+// coordinates.forEach(({ x, y }, index) => {
+//     timeline.to([small_circle, large_circle], {
+//         x: x - centerX, // Điều chỉnh vị trí x của small_circle và large_circle
+//         y: y - centerY, // Điều chỉnh vị trí y của small_circle và large_circle
+//         duration:1, // Thời gian chuyển động        
+//         ease: "none"
+//     });
+// });
 
 paginationDots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
