@@ -22,6 +22,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
@@ -1069,6 +1071,9 @@
   .gap-0 {
     gap: calc(var(--spacing) * 0);
   }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -1299,9 +1304,6 @@
   .border-\[\#e2e2e2\] {
     border-color: #e2e2e2;
   }
-  .border-black {
-    border-color: var(--color-black);
-  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1310,6 +1312,12 @@
   }
   .bg-\[\#0088cc\] {
     background-color: #0088cc;
+  }
+  .bg-\[\#f7edee\] {
+    background-color: #f7edee;
+  }
+  .bg-\[\#fff9f6\] {
+    background-color: #fff9f6;
   }
   .bg-\[\#fff\] {
     background-color: #fff;
@@ -1534,6 +1542,9 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
@@ -1548,6 +1559,9 @@
   }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
+  }
+  .py-32 {
+    padding-block: calc(var(--spacing) * 32);
   }
   .pt-2 {
     padding-top: calc(var(--spacing) * 2);
@@ -1612,6 +1626,10 @@
   .align-top {
     vertical-align: top;
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -1631,9 +1649,6 @@
   .text-\[10px\] {
     font-size: 10px;
   }
-  .text-\[11px\] {
-    font-size: 11px;
-  }
   .text-\[12px\] {
     font-size: 12px;
   }
@@ -1647,10 +1662,6 @@
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .font-light {
     --tw-font-weight: var(--font-weight-light);
@@ -2269,13 +2280,6 @@
       }
     }
   }
-  .hover\:bg-black {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-black);
-      }
-    }
-  }
   .hover\:text-white {
     &:hover {
       @media (hover: hover) {
@@ -2487,6 +2491,11 @@
       min-height: 480px;
     }
   }
+  .lg\:w-1\/2 {
+    @media (width >= 64rem) {
+      width: calc(1/2 * 100%);
+    }
+  }
   .lg\:w-\[90px\] {
     @media (width >= 64rem) {
       width: 90px;
@@ -2502,6 +2511,11 @@
       max-width: 260px;
     }
   }
+  .lg\:max-w-\[310px\] {
+    @media (width >= 64rem) {
+      max-width: 310px;
+    }
+  }
   .lg\:min-w-\[480px\] {
     @media (width >= 64rem) {
       min-width: 480px;
@@ -2513,9 +2527,19 @@
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
+  .lg\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
+    }
+  }
   .lg\:justify-center {
     @media (width >= 64rem) {
       justify-content: center;
+    }
+  }
+  .lg\:px-5 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 5);
     }
   }
   .lg\:text-5xl {
@@ -2528,6 +2552,12 @@
     @media (width >= 64rem) {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+  }
+  .lg\:text-base {
+    @media (width >= 64rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .lg\:text-xl {
@@ -2723,6 +2753,29 @@ body {
 }
 #pagination i.active {
   color: #222;
+}
+.flat__off::before {
+  content: '';
+  width: 12px;
+  background: var(--mau-do);
+  margin-right: 4px;
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.discover-button {
+  background-color: white;
+  color: var(--mau-den);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: max-content;
+}
+.discover-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px -5px rgba(0, 0, 0, 0.2);
 }
 @property --tw-translate-x {
   syntax: "*";

@@ -173,3 +173,30 @@ body {
 #pagination i.active {
     color: #222; /* Mặc định màu xám */    
 }
+
+.flat__off::before {
+    content:'';
+    width:12px;
+    background:var(--mau-do);
+    margin-right:4px;
+    display:inline-block;
+    height:1px;
+    vertical-align: middle;
+    margin-right:10px;
+}
+
+.discover-button {
+
+    background-color: white;
+    color: var(--mau-den);    
+    border: none;    
+    cursor: pointer;
+    box-shadow:0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    width:max-content;
+}
+
+.discover-button:hover {
+    transform:translateY(-5px);
+    box-shadow: 0px 8px 25px -5px rgba(0, 0, 0, 0.2);
+}
