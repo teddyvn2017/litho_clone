@@ -13,6 +13,7 @@ body {
     --mau-hong-secondary:#faded8;
     --mau-vang-nhat:#f4eeed;
     --mau-do:rgb(240, 111, 66);
+    --mau-xanhduong:#21b375;
     --header-height:40px;
     --mau-den:#222;
     --mau-xam:#ccc;
@@ -28,6 +29,10 @@ body {
 
 .color__mauxam {
     color:var(--mau-xam);
+}
+
+.bg__mauxanhduong {
+    background-color:var(--mau-xanhduong);
 }
 
 .bg__mautrang {
