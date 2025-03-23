@@ -17,6 +17,7 @@ body {
     --header-height:40px;
     --mau-den:#222;
     --mau-xam:#ccc;
+    --mau-xamnhat:#848484;
 }
 
 .color__maudo {
@@ -30,6 +31,11 @@ body {
 .color__mauxam {
     color:var(--mau-xam);
 }
+
+.color__mauxamnhat {
+    color:var(--mau-xamnhat);
+}
+
 
 .bg__mauxanhduong {
     background-color:var(--mau-xanhduong);
@@ -199,4 +205,37 @@ body {
 .discover-button:hover {
     transform:translateY(-5px);
     box-shadow: 0px 8px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.blog-container {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px, 1fr));
+
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-rows: repeat(3, auto); 
+   /* grid-template-rows: repeat(4, auto); */
+      
+}  
+
+article {
+    display: grid;    
+    grid-template-rows: subgrid;
+    grid-row: 1/4;
+}
+
+
+article > img {
+    grid-row:1/2;        
+}
+
+h3 {
+    grid-row:2/3;
+}
+
+p {
+    grid-row:3/4;    
 }

@@ -158,38 +158,38 @@ prevBtn.addEventListener('click', () => {
 
 //Animate circle
 
-// const rect = small_circle.getBoundingClientRect();
-// const centerX = rect.left + rect.width / 2;  // Tính toán trung tâm của large_circle
-// const centerY = rect.top + rect.height / 2;  // Tính toán trung tâm của large_circle
-// const radius = 24; // Bán kính vòng tròn (20px)
-// const points = 16; // Số điểm trên vòng tròn (8 điểm)
+const rect = small_circle.getBoundingClientRect();
+const centerX = rect.left + rect.width / 2;  // Tính toán trung tâm của large_circle
+const centerY = rect.top + rect.height / 2;  // Tính toán trung tâm của large_circle
+const radius = 24; // Bán kính vòng tròn (20px)
+const points = 16; // Số điểm trên vòng tròn (8 điểm)
 
-// let angle = 0;
-// const coordinates = [];
+let angle = 0;
+const coordinates = [];
 
-// for (let i = 0; i < points; i++) {
-//     const x = Math.round(centerX + Math.cos(angle) * radius); // Tính x theo cos
-//     const y = Math.round(centerY + Math.sin(angle) * radius); // Tính y theo sin
+for (let i = 0; i < points; i++) {
+    const x = Math.round(centerX + Math.cos(angle) * radius); // Tính x theo cos
+    const y = Math.round(centerY + Math.sin(angle) * radius); // Tính y theo sin
 
-//     coordinates.push({ x, y });
+    coordinates.push({ x, y });
 
-//     angle += (2 * Math.PI) / points; // Tăng góc để chuyển đến điểm tiếp theo (360° / 8 = 45°)
-//     console.log("Tọa độ thứ i:", i) ;
-// }
+    angle += (2 * Math.PI) / points; // Tăng góc để chuyển đến điểm tiếp theo (360° / 8 = 45°)
+    console.log("Tọa độ thứ i:", i) ;
+}
 
 // console.log("Tọa độ các điểm trên vòng tròn:", coordinates);
 
-// // Tạo timeline để di chuyển các phần tử theo vòng tròn
-// const timeline = gsap.timeline({ repeat: -1, ease: "none" });
+// Tạo timeline để di chuyển các phần tử theo vòng tròn
+const timeline = gsap.timeline({ repeat: -1, ease: "none" });
 
-// coordinates.forEach(({ x, y }, index) => {
-//     timeline.to([small_circle, large_circle], {
-//         x: x - centerX, // Điều chỉnh vị trí x của small_circle và large_circle
-//         y: y - centerY, // Điều chỉnh vị trí y của small_circle và large_circle
-//         duration:1, // Thời gian chuyển động        
-//         ease: "none"
-//     });
-// });
+coordinates.forEach(({ x, y }, index) => {
+    timeline.to([small_circle, large_circle], {
+        x: x - centerX, // Điều chỉnh vị trí x của small_circle và large_circle
+        y: y - centerY, // Điều chỉnh vị trí y của small_circle và large_circle
+        duration:0.5, // Thời gian chuyển động        
+        ease: "none"
+    });
+});
 
 paginationDots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
@@ -212,57 +212,3 @@ paginationDots.forEach((dot, index) => {
 //     .to([small_circle,large_circle], { x: -9, y: -9, duration: 1 })  // Dưới trái
 //     .to([small_circle,large_circle], { x: -13, y: 0, duration: 1 }); // Quay lại điểm ban đầu
 
-
-//gsap.set(large_circle, { transformOrigin: "50% 50%" });
-// const rect = large_circle.getBoundingClientRect();
-// const centerX = rect.left + rect.width / 2;
-// const centerY = rect.top + rect.height / 2;
-// const radius = 20; // Bán kính vòng tròn (20px)
-// const points = 8; // Số điểm trên vòng tròn (8 điểm)
-
-// // Tạo các cặp tọa độ cho 8 điểm trên vòng tròn
-// let angle = 0;
-// const coordinates = [];
-
-// for (let i = 0; i < points; i++) {
-//     const x = centerX + Math.cos(angle) * radius; // Tính x theo cos
-//     const y = centerY + Math.sin(angle) * radius; // Tính y theo sin
-
-//     coordinates.push({ x, y });
-
-//     angle += (2 * Math.PI) / points; // Tăng góc để chuyển đến điểm tiếp theo (360° / 8 = 45°)
-// }
-
-// console.log("Tọa độ các điểm trên vòng tròn:", coordinates);
-// const timeline = gsap.timeline({ repeat: -1, ease: "none" });
-
-// coordinates.forEach(({ x, y }, index) => {
-// timeline.to(large_circle, {
-//     x: x - centerX, // Điều chỉnh vị trí x
-//     y: y - centerY, // Điều chỉnh vị trí y
-//     duration: 1, // Thời gian chuyển động
-//     ease: "none"
-//     });
-// });
-// console.log(small_circle);
-// Ẩn hình ảnh trước, sau đó thay đổi src và hiện lại
-// currentIndex = (currentIndex + 1) % images.length;
-// gsap.to([gheImage, small_circle], {
-//     opacity: 0,
-//     duration:2,
-//     ease: "power2.out",
-//     onComplete: () => {
-//         // Cập nhật index và thay đổi src hình ảnh
-//         currentIndex = (currentIndex + 1) % images.length;
-//         gheImage.src = images[currentIndex];
-
-//         // Đợi đến khi ảnh mới tải xong trước khi áp dụng opacity
-//         gheImage.onload = () => {
-//             gsap.to([gheImage, small_circle], {
-//                 opacity: 1,
-//                 duration: 1,
-//                 ease: "power2.out"
-//             });
-//         };
-//     }
-// });
