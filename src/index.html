@@ -202,8 +202,7 @@
 			
 			<!-- Row 1 -->
 			<div class="flex items-center justify-center 
-						gap-8 flex-row flex-wrap md:justify-center md:px-8						
-						py-16">
+						gap-8 flex-row flex-wrap md:justify-center px-8	py-16">
 				<!-- item -->
 				<div class="relative cursor-pointer group">
 									
@@ -488,33 +487,31 @@
 		<!-- Sale off -->
 		<section class="w-full py-24 bg-[#fff9f6]">
 			<div class="flex flex-row flex-wrap items-center justify-center">
-				<div class="flex flex-row justify-center items-center gap-8 lg:w-1/2 py-16 px-8">
+				<div class="flex flex-col md:flex-row justify-center items-center gap-8 lg:w-1/2 py-16 px-8">
 					<img 
-						class="max-w-[300px] lg:max-w-[310px]"
+						class="max-w-[280px] lg:max-w-[310px] w-full"
 						src="asset/img/saleoff01.png" alt="sale off wooden armchair">
-					<div class="flex flex-col gap-4 items-start">
+					<div class="flex flex-col md:gap-4 gap-1 items-start">
 						
-						<h4 class="text-base uppercase font-medium flat__off color__maudo">Flat 50% off</h4>
-						<h2 class="color__mauden lg:text-5xl text-4xl mt-4 font-normal">Wooden</h2>
+						<h4 class="text-sm md:text-base uppercase font-medium flat__off color__maudo">Flat 50% off</h4>
+						<h2 class="color__mauden text-4xl lg:text-5xl mt-2 md:mt-4 font-normal">Wooden</h2>
 						<h3 class="font-semibold color__mauden text-2xl">armchair</h3>
-						<button id="btnDiscover" class="discover-button mt-2 text-sm lg:text-base px-4 lg:px-5 py-2.5">
+						<button id="btnDiscover" class="discover-button mt-2 text-[12px] md:text-sm lg:text-base px-4 lg:px-5 py-2.5">
 							DISCOVER NOW
 						</button>
 					</div>
-
 				</div>
 				
-				<div class="flex flex-row justify-center items-center gap-8 lg:w-1/2 bg-[#f7edee] py-16 px-8">
+				<div class="flex flex-col md:flex-row justify-center items-center gap-8 lg:w-1/2 bg-[#f7edee] py-16 px-8 w-full">
 					<img 
-						class="max-w-[300px] lg:max-w-[310px] w-full"
+						class="max-w-[280px] lg:max-w-[310px] w-full"
 						src="asset/img/saleoff02.png" alt="sale off wooden armchair">
-					<div class="flex flex-col gap-1 items-start">
-						
-						<h4 class="text-base uppercase font-medium flat__off color__maudo">Flat 40% off</h4>
-						<h2 class="color__mauden lg:text-5xl text-4xl mt-4 font-normal">Modern</h2>
+					<div class="flex flex-col gap-1 items-start">						
+						<h4 class="text-sm md:text-base uppercase font-medium flat__off color__maudo">Flat 40% off</h4>
+						<h2 class="color__mauden text-4xl lg:text-5xl mt-2 md:mt-4 font-normal">Modern</h2>
 						<h3 class="font-semibold color__mauden text-2xl">retro</h3>
 						<h3 class="font-semibold color__mauden text-2xl">stool</h3>
-						<button id="btnDiscover" class="discover-button mt-2 text-sm lg:text-base px-4 lg:px-5 py-2.5">
+						<button id="btnDiscover" class="discover-button mt-2 text-[12px] md:text-sm lg:text-base px-4 lg:px-5 py-2.5">
 							DISCOVER NOW
 						</button>
 					</div>
@@ -585,21 +582,21 @@
 		<!-- Partner -->
 		<section class="bg-white w-full">
 			<div class="flex items-center justify-center 
-						flex-row md:gap-12 gap-8 px-8 mx-auto flex-wrap">
-				<img src="asset/img/logo1.webp" alt="logo01">
-				<img src="asset/img/logo2.webp" alt="logo02">
-				<img src="asset/img/logo3.webp" alt="logo03">
-				<img src="asset/img/logo4.webp" alt="logo04">
+						flex-row md:gap-12 gap-16 px-8 py-16 md:py-10 mx-auto flex-wrap">
+				<img src="asset/img/logo1.jpg" alt="logo01">
+				<img src="asset/img/logo2.jpg" alt="logo02">
+				<img src="asset/img/logo3.jpg" alt="logo03">
+				<img src="asset/img/logo4.jpg" alt="logo04">
 			</div>
 		</section>
 	</main>
 	<footer class="w-full bg-[#222]">
-		<div class="flex flex-row items-start justify-between py-24 px-8 lg:px-32
+		<div class="flex flex-row items-start justify-start py-24 px-8 lg:px-32
 					flex-wrap gap-16 lg:gap-24">
 
-			<div class="flex flex-col items-start gap-4">
+			<div class="flex flex-col items-start gap-4 min-w-[130px]">
 				<h4 class="mb-4 text-white">Catergories</h4>
-				<ul class="flex flex-col gap-4 color__mauxamnhat text-sm">
+				<ul class="flex flex-col gap-4 color__mauxamnhat text-sm min-w-[130px]">
 					<li>
 						<a href="#" class="transition-colors duration-300 hover:text-white">For men</a>
 					</li>
@@ -615,7 +612,7 @@
 				</ul>
 			</div>
 
-			<div class="flex flex-col items-start gap-4">
+			<div class="flex flex-col items-start gap-4 min-w-[130px]">
 				<h4 class="mb-4 text-white">Company</h4>
 				<ul class="flex flex-col gap-4 color__mauxamnhat text-sm w-full">
 					<li>
@@ -633,7 +630,7 @@
 				</ul>
 			</div>
 
-			<div class="flex flex-col items-start gap-4">
+			<div class="flex flex-col items-start gap-4 min-w-[130px]">
 				<h4 class="mb-4 text-white">Customer</h4>
 				<ul class="flex flex-col gap-4 color__mauxamnhat text-sm w-full">
 					<li>
@@ -651,7 +648,7 @@
 				</ul>
 			</div>
 
-			<div class="flex flex-col items-start gap-4">
+			<div class="flex flex-col items-start gap-4 min-w-[130px]">
 				<h4 class="mb-4 text-white">Company</h4>
 				<ul class="flex flex-col gap-4 color__mauxamnhat text-sm w-full">
 					<li>
@@ -669,15 +666,14 @@
 				</ul>
 			</div>
 
-			<div class="flex flex-col items-start gap-4">
+			<div class="flex flex-col items-start gap-4 flex-wrap">
 				<h4 class="mb-4 text-white">Subscribe to newsletter</h4>
-				<h4 class="text-sm truncate max-w-[300px] text-wrap color__mauxamnhat">Enter your email address for receiving valuable newsletters.</h4>	
-				<div class="flex flex-col gap-4 relative items-start px-3 py-3 bg-white rounded-md">
+				<h4 class="text-sm text-wrap color__mauxamnhat">Enter your email address for receiving valuable newsletters.</h4>
+				<div class="flex flex-col gap-4 relative items-start py-3 bg-white rounded-md pl-2">
 					<input type="email" placeholder="Enter your email address">
 					<span class="absolute right-0 pr-2"><i class="ri-mail-send-line"></i></span>
 				</div>
 			</div>
-
 		</div>
 		
 		<div class="px-8 lg:px-32 py-8 relative">
