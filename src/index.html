@@ -18,7 +18,26 @@
 				<div class="hidden md:flex gap-8">
 					<a href="#" class="link-menu active">Home</a>
 					<a href="#" class="link-menu">About Us</a>
-					<a href="#" class="link-menu">Products</a>
+					
+					<!-- Menu Products có Submenu -->
+					<div class="relative group">
+						<a href="#" class="link-menu pb-2 flex items-center gap-2">
+							Products
+							<i class="ri-arrow-drop-down-line text-lg transform transition-transform duration-300 group-hover:rotate-180"></i>
+						</a>						
+						<ul class="flex flex-col gap-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 
+									absolute left-0 mt-4 w-40 bg-white shadow-lg px-8 pb-4">
+							<li>
+								<a href="#" class="hover:text-[#f06f42] transition-colors duration-300">Chair</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#f06f42] transition-colors duration-300">Table</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#f06f42] transition-colors duration-300">Lamp</a>
+							</li>
+						</ul>
+					</div>
 					<a href="#" class="link-menu">Contact</a>
 				</div>
 	
@@ -37,8 +56,8 @@
 			</div>									
 										
 			<!-- Menu cho Mobile -->
-			<div class="menu__mobile absolute top-[68px] right-0 bg-[#fff] w-2/3 transition translate-x-full" id="mobile-menu">
-				<ul class="flex flex-col md:flex-row gap-4 shadow-md py-4 pl-4">
+			<div class="menu__mobile absolute top-[68px] right-0 bg-[#fff] w-2/3 transition translate-x-full uppercase h-screen" id="mobile-menu">
+				<ul class="flex flex-col md:flex-row gap-8 shadow-[rgba(0,0,0,0.1)_-4px_0px_10px] py-4 pl-8">
 					<li>
 						<a href="#">Home</a>
 					</li>
@@ -581,8 +600,8 @@
 		
 		<!-- Partner -->
 		<section class="bg-white w-full">
-			<div class="flex items-center justify-center 
-						flex-row md:gap-12 gap-16 px-8 py-16 md:py-10 mx-auto flex-wrap">
+			<div class="container max-w-[800px] flex items-center justify-around 
+						flex-row md:gap-12 gap-16 lg:gap-16 px-8 py-16 md:py-10 mx-auto flex-wrap">
 				<img src="asset/img/logo1.jpg" alt="logo01">
 				<img src="asset/img/logo2.jpg" alt="logo02">
 				<img src="asset/img/logo3.jpg" alt="logo03">
@@ -676,13 +695,13 @@
 			</div>
 		</div>
 		
-		<div class="px-8 lg:px-32 py-8 relative">
+		<div class="px-8 lg:px-32 py-8">
 				<div class="border-t-[1px] border-[#a9a9a9] container mx-auto 
 						flex flex-col md:flex-row md:justify-between md:flex-wrap items-center 
 						gap-4 text-sm color__mauxamnhat pt-8">
-				<img class="max-h-[36px] place-self-start" src="asset/img/logo_white.png" alt="logo footer">
-				<div>© 2025 Litho is Proudly Powered by ThemeZaa</div>
-				<img class="place-self-start" src="asset/img/footer_payment.webp" alt="payment">
+					<img class="max-h-[36px] place-self-start" src="asset/img/logo_white.png" alt="logo footer">
+					<div>© 2025 Litho is Proudly Powered by ThemeZaa</div>
+					<img class="place-self-start" src="asset/img/footer_payment.webp" alt="payment">
 			</div>
 		</div>		
 		
