@@ -15,6 +15,7 @@ document.getElementById("mobile-products-toggle").addEventListener("click", () =
 const productsMenu = document.getElementById("products-menu");
 const submenu = document.getElementById("submenu-desktop");
 const dropdownIcon = document.getElementById("dropdown-icon");
+const productsLink = productsMenu.querySelector("a");
 
 productsMenu.addEventListener("click", function(e) {
     e.preventDefault(); // Ngừng hành động mặc định của thẻ a
@@ -38,4 +39,17 @@ document.addEventListener("click", function (e) {
       // Reset lại mũi tên về trạng thái cũ
       dropdownIcon.classList.remove("rotate-180");
     }
-  });
+});
+
+submenu.addEventListener("mouseover", function (e) {
+    productsLink.classList.add("active");
+});
+
+// Khi rời khỏi submenu, giữ trạng thái nếu submenu còn mở
+submenu.addEventListener("mouseout", function () {
+    if (!submenu.classList.contains("opacity-100") || submenu.classList.contains("invisible")) {
+        productsLink.classList.remove("active");
+        productsMenu.classList.remove("active");
+    }
+});
+

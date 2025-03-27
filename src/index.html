@@ -20,7 +20,9 @@
 						<li><a href="#" class="link-menu active">Home</a></li>
 						<li><a href="#" class="link-menu">About Us</a></li>				
 						<li class="relative group" id="products-menu">
-							<a href="#" class="link-menu pb-2 flex items-center gap-2" role="button">
+							<a href="#"
+								id="products-link"
+							 	class="link-menu flex items-center gap-2" role="button">
 							  Products
 							  <i id="dropdown-icon" class="ri-arrow-drop-down-line text-lg transform transition-transform duration-300 group-hover:rotate-180"></i>
 							</a>						  
@@ -54,7 +56,8 @@
 			</div>									
 										
 			<!-- Menu cho Mobile -->
-			<div class="menu__mobile absolute top-[68px] right-0 bg-[#fff] w-2/3 transition translate-x-full uppercase h-screen" id="mobile-menu">
+			<div class="menu__mobile md:hidden absolute top-[68px] 
+						right-0 bg-[#fff] w-2/3 transition translate-x-full uppercase h-screen" id="mobile-menu">
 				<ul class="flex flex-col md:flex-row gap-8 shadow-[rgba(0,0,0,0.1)_-4px_0px_10px] py-4 pl-8">
 					<li>
 						<a href="#">Home</a>
@@ -86,20 +89,20 @@
 		<section class="hero pt-[80px] pb-8 md:pb-[80px] font-roboto overflow-hidden">
 			<div 
 				class="mx-auto flex flex-col gap-8 
-						justify-center items-center px-8 pt-16
+						justify-center items-center px-8 pt-16						
 						md:flex-row relative">
 						<!-- chú ý lg:min-w-[480px] để hiệu ứng không bị giật lag thì cố định chiều rộng -->
-				<div class="text-center min-h-[180px] md:w-auto md:text-left md:ml-auto md:justify-end lg:min-w-[480px]">
+				<div class="text-center min-h-[180px] md:w-auto md:text-left md:ml-auto md:justify-end 
+							lg:min-w-[400px]">
 					<h4 class="text-neutral-500 text-[12px] 
-							uppercase font-light md:text-base lg:mb-8" id="heading">Decoration Design</h4>
+							uppercase font-light md:text-xl lg:mb-8" id="heading">Decoration Design</h4>
 					<h1 id="title" class="text-4xl text-neutral-800 font-medium pt-2 md:font-bold md:text-5xl lg:text-6xl xl:text-8xl">Woodend</h1>
-					<h2 id="subtitle" class="text-3xl text-neutral-800 md:text-3xl lg:text-5xl mt-2">lithology</h2>					
+					<h2 id="subtitle" class="text-3xl text-neutral-800 md:text-4	xl lg:text-5xl mt-2">lithology</h2>					
 					<!-- shadow-[0px_10px_20px_rgba(0,0,0,0.1)] : x y blur color -->
 					<button id="btnDiscover" class="lg:mt-10 text-[12px] px-4 py-3 bg-white text-gray-700 font-normal 
 						shadow-[0px_10px_20px_rgba(0,0,0,0.1)]  
 						hover:shadow-[0px_15px_40px_rgba(0,0,0,0.15)] 
-						w-fit 
-						transition-shadow duration-300 mt-4 md:text-sm cursor-pointer">
+						w-fit transition-shadow duration-300 mt-4 md:text-sm cursor-pointer">
 						DISCOVER NOW
 					</button>					
 				</div>
@@ -108,7 +111,7 @@
 					<!-- hình tròn nhỏ -->
 					<div id="small_circle" class="rounded-full absolute z-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 
 							min-w-[340px] min-h-[340px] md:min-w-[380px] md:min-h-[380px]
-							lg:min-w-[480px] lg:min-h-[480px] xl:min-w-[500px] xl:min-h-[500px]
+							lg:min-w-[420px] lg:min-h-[420px] xl:min-w-[500px] xl:min-h-[500px]
 							bg__hongnhat"></div>					
 					<!-- hình tròn lớn -->
     				<div id="large_circle" class="absolute bottom-[-620px] left-1/2 -translate-x-1/2 w-[940px] h-[940px] 
@@ -120,26 +123,26 @@
 								2xl:left-[310px]
 								">
 					</div>
-					<div class="absolute z-[13] flex flex-col w-[240px] md:w-[320px] xl:w-[360px] justify-center">
+					<div class="absolute z-[13] flex flex-col w-[240px] md:w-[260px] xl:w-[360px] justify-center">
 						
 						<img 
 							src="./asset/img/ghe1.png" alt="ghe" id="gheImage">
 
 							<!-- hình tròn giá -->
 							<div id="price_circle" class="rounded-full absolute top-12 right-0 bg__maudo 
-								text-white text-base text-center w-[80px] h-[80px] lg:w-[90px] lg:h-[90px]
+								text-white text-base text-center w-[70px] h-[70px] lg:w-[90px] lg:h-[90px]
 								z-[12]	md:right-0 md:top-10 lg:top-[-2rem] lg:right-[-1rem]
 								lg:text-xl flex flex-col justify-center uppercase leading-5">
-								<span class="md:text-base">Only</span>
-								<span class="md:text-3xl">$89</span>
+								<span class="md:text-sm lg:text-base">Only</span>
+								<span class="md:text-2xl lg:text-3xl">$89</span>
 							</div>
 					</div>					
 				</div>
 				
-				<div id="prev" class="prev-btn ml-4">					
+				<div id="prev" class="prev-btn ml-4 lg:ml-8">					
 					<i class="ri-arrow-left-long-line"></i>
 				</div>
-				<div id="next" class="next-btn mr-4">
+				<div id="next" class="next-btn mr-4 lg:mr-8">
 					<i class="ri-arrow-right-long-line"></i>
 				</div>
 				<div id="pagination" class="absolute bottom-0 md:bottom-[-24px] left-1/2 -translate-x-1/2 flex flex-grow gap-4">

@@ -94,7 +94,7 @@ body {
     height:2px;
     background-color:var(--mau-do);
     left:0;
-    bottom:-8px;
+    bottom:-4px;
     transition: width 0.3s ease-in-out;    
 }
 
