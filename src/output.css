@@ -706,6 +706,12 @@
   .min-w-\[130px\] {
     min-width: 130px;
   }
+  .min-w-\[240px\] {
+    min-width: 240px;
+  }
+  .min-w-\[260px\] {
+    min-width: 260px;
+  }
   .min-w-\[340px\] {
     min-width: 340px;
   }
@@ -2538,6 +2544,11 @@
   .md\:max-w-\[300px\] {
     @media (width >= 48rem) {
       max-width: 300px;
+    }
+  }
+  .md\:min-w-\[240px\] {
+    @media (width >= 48rem) {
+      min-width: 240px;
     }
   }
   .md\:min-w-\[380px\] {
