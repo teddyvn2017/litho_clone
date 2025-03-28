@@ -30,7 +30,6 @@ toggleBtn.addEventListener("click", () => {
 });
 
 // header
-
 window.addEventListener("scroll", () => {
 	var header = document.querySelector("header");
 	if (window.scrollY > 50) {
@@ -40,4 +39,19 @@ window.addEventListener("scroll", () => {
 		header.classList.add("bg-transparent");
 		header.classList.remove("bg-white","shadow-md");
 	}
-})
+});
+
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+	if (window.scrollY > 200) {
+		scrollToTopBtn.classList.remove("hidden");
+	} else {
+		scrollToTopBtn.classList.add("hidden");
+	}
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
