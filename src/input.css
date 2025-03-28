@@ -65,6 +65,11 @@ body {
     height:var(--header-height);
 }
 
+header.scrolled {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .linear__gradient1 {
     background: linear-gradient(rgb(255, 219, 214) 0%, rgb(255, 229, 225) 100%);
 }

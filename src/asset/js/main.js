@@ -28,3 +28,16 @@ toggleBtn.addEventListener("click", () => {
 	}
 	isOpen = !isOpen;
 });
+
+// header
+
+window.addEventListener("scroll", () => {
+	var header = document.querySelector("header");
+	if (window.scrollY > 50) {
+		header.classList.add("bg-white","shadow-md");
+		header.classList.remove("bg-transparent");
+	} else {
+		header.classList.add("bg-transparent");
+		header.classList.remove("bg-white","shadow-md");
+	}
+})
