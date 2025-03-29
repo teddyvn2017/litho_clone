@@ -55,3 +55,30 @@ scrollToTopBtn.addEventListener("click", () => {
 	window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+
+// Search
+// document.getElementById("btnSearch").addEventListener("click", function () {
+	
+// 	let frmSearch = document.getElementById("frmSearch");
+// 	if (frmSearch.classList.contains("hidden")) {
+// 		frmSearch.classList.remove("hidden");
+// 		frmSearch.classList.add("translate-y-0", "opacity-100");
+// 	}
+// 	else {
+// 		frmSearch.classList.remove("translate-y-0", "opacity-100");
+// 		frmSearch.classList.add("hidden");
+// 	}
+// });
+
+document.getElementById("btnSearch").addEventListener("click", function () {
+    let frmSearch = document.getElementById("frmSearch");
+	frmSearch.classList.remove("-translate-y-full", "opacity-0"); 
+    frmSearch.classList.add("translate-y-0","opacity-100");
+});
+
+
+document.getElementById("btnClose").addEventListener("click", function () {
+	let frmSearch = document.getElementById("frmSearch");	
+	frmSearch.classList.remove("translate-y-0","opacity-100"); 
+	frmSearch.classList.add("-translate-y-full","opacity-0");	
+});
