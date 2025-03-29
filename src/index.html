@@ -39,10 +39,10 @@
 						<li><a href="#" class="link-menu">Contact</a></li>
 					</ul>
 				
-					<div class="flex flex-row gap-4 relative">
+					<div class="flex flex-row gap-4">
 						<div class="flex flex-row gap-6 text-[20px]">
 							<i id="btnSearch" class="ri-search-line cursor-pointer"></i>
-							<i class="ri-shopping-bag-3-line shopping-bag"></i>
+							<i id="btnCart" class="ri-shopping-bag-3-line shopping-bag cursor-pointer"></i>
 						</div>
 				
 						<div class="md:hidden relative w-8 h-8 cursor-pointer flex items-center justify-center" id="menu-toggle">
@@ -718,7 +718,7 @@
 				<h4 class="mb-4 text-white">Subscribe to newsletter</h4>
 				<h4 class="text-sm text-wrap color__mauxamnhat">Enter your email address for receiving valuable newsletters.</h4>
 				<div class="flex flex-col gap-4 relative items-start py-3 bg-white rounded-md pl-2">
-					<input type="email" placeholder="Enter your email address" class="min-w-[260px]">
+					<input type="email" placeholder="Enter your email address" class="min-w-[260px] border-0">
 					<span class="absolute right-0 pr-2"><i class="ri-mail-send-line"></i></span>
 				</div>
 			</div>
@@ -736,7 +736,7 @@
 		
 	</footer>	
 	<button id="scrollToTopBtn" class="hidden fixed bottom-20 right-10 bg-white text-gray-900 p-3 rounded-full 
-		shadow-lg transition-all duration-500 w-[48px] h-[48px] cursor-pointer hover:bg-black hover:text-white">
+		shadow-lg transition-all duration-500 w-[48px] h-[48px] cursor-pointer hover:bg-black hover:text-white z-50">
         <i class="ri-arrow-up-line"></i>
     </button>
 <script src="https://unpkg.com/split-type"></script>
